@@ -1,2 +1,1 @@
-# SPA
-Single-cell cluster and phenotype cross annotataion framework
+# SPA: Single-cell cluster and phenotype cross annotataion framework
