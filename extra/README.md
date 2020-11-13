@@ -1,6 +1,7 @@
 # Extra scripts for SPA
 ## Preprocess GWAS summary statistics file for SPA
-Commond: `python preprocessGWAS [options]`
+Command: `python preprocessGWAS.py [options]`
+
 Options:
 ```
 --gwas GWAS      Input GWAS summary statistics file path
