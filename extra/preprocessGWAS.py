@@ -68,4 +68,5 @@ if __name__=='__main__':
     parser.add_argument('--chr', help='chromosome number column name')
     parser.add_argument('--pos', help='base pair position (hg19/GRCh37) column name')
     parser.add_argument('--pvalue', help='P value column name')
+    args = parser.parse_args()
     get_standard_GWAS_file(args.gwas,args.out,args.chr,args.pos,args.pvalue)
