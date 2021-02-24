@@ -39,7 +39,7 @@ def get_standard_GWAS_file(gwas,out,chr,pos,pvalue):
     header=re.split('\s+',br.__next__())
     idxs=[header.index(x.strip()) for x in [chr,pos,pvalue]]
     bw=gzip.open(out,'w')
-    bw.write(('\t'.join(['CHR','POS','PVALUE'])+'\n').encode())
+    bw.write(('\t'.join(['CHR','BP','P'])+'\n').encode())
     raw=0
     qc=0
     for line in br:
@@ -66,7 +66,7 @@ if __name__=='__main__':
     parser.add_argument('--gwas', help='Input GWAS summary statistics file path')
     parser.add_argument('--out', help='Output GWAS summary statistics file path')
     parser.add_argument('--chr', help='chromosome number column name')
-    parser.add_argument('--pos', help='base pair position (hg19/GRCh37) column name')
+    parser.add_argument('--bp', help='base pair position (hg19/GRCh37) column name')
     parser.add_argument('--pvalue', help='P value column name')
     args = parser.parse_args()
-    get_standard_GWAS_file(args.gwas,args.out,args.chr,args.pos,args.pvalue)
+    get_standard_GWAS_file(args.gwas,args.out,args.chr,args.bp,args.pvalue)
